@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>genai-trainer</title>
+        <!-- Load MediaPipe from local public/mediapipe/*. If you haven't copied assets yet,
+          run `npm install` then `node scripts/copy-mediapipe-assets.js` to populate them. -->
+        <!-- <script src="/mediapipe/pose/pose.js"></script>
+        <script src="/mediapipe/camera_utils/camera_utils.js"></script>
+        <script src="/mediapipe/drawing_utils/drawing_utils.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.2/pose.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js"></script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
