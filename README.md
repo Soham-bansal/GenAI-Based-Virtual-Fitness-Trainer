@@ -81,13 +81,18 @@ Tracks:
 
 ## 📸 Screenshots  
 
-> Replace the image paths with the actual ones in your repo (`/assets/...` or `/docs/...`).
+- **Main Screen UI**
+  
+  <img src="genai-trainer/src/assets/main_screen.png" alt="drawing" width="500"/>
 
-![Workout Screenshot](assets/workout.png)
+- **Wrong Pose PopUp**
 
-![Form Error Popup](assets/warning.png)
+  <img src="genai-trainer/src/assets/wrongpose_popup.png" alt="drawing" width="500"/>
 
-![Dashboard](assets/dashboard.png)
+- **Dashboard UI**
+  
+  <img src="genai-trainer/src/assets/dashboard.png" alt="drawing" width="500"/>
+
 
 ---
 
@@ -112,7 +117,7 @@ Tracks:
 
 ## 📂 Folder Structure  
 
-```bash
+  ```bash
 GenAI-Based-Virtual-Fitness-Trainer/
 │
 ├── backend/
@@ -132,3 +137,95 @@ GenAI-Based-Virtual-Fitness-Trainer/
 │   └── package.json
 │
 └── README.md
+  ```
+## ⚙️ How to Run the Project
+Before Going to Next Step make sure following prerequsites to be their
+- **Node.js ≥ 18**
+- **Python ≥ 3.10**
+- **Ollama installed locally with a pulled model, e.g.:**
+ 
+  ```bash
+  ollama pull mistral:7b-instruct
+  ```
+1️⃣ **Clone the Repository**
+   ```bash
+    git clone https://github.com/Soham-bansal/GenAI-Based-Virtual-Fitness-Trainer.git
+    cd GenAI-Based-Virtual-Fitness-Trainer
+   ```
+2️⃣ **⚙️ Backend Setup (FastAPI + Ollama)**
+ 1. Create a requirements.txt in the backend folder:
+    
+    ```bash
+    fastapi
+    uvicorn[standard]
+    httpx
+    pydantic
+    python-dotenv
+    ```
+2. Create and activate a virtual environment:
+
+   ```bash
+     cd backend
+    # Create venv
+    python -m venv venv
+    
+    # Activate (Windows)
+    venv\Scripts\activate
+    
+    # or macOS / Linux
+    # source venv/bin/activate
+   ```
+   
+3. Install dependencies:
+   
+   ```bash
+     pip install -r requirements.txt
+   ```
+   
+5. Make sure Ollama is running, and (optionally) set environment variables:
+
+   ```bash
+     set OLLAMA_URL=http://localhost:11434
+     set OLLAMA_MODEL=mistral:7b-instruct
+   ```
+6. Start the FastAPI server:
+
+   ```bash
+    uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+   ```
+
+3️⃣ **🖥 Frontend Setup (React + Vite)**
+  
+  Install & Run
+
+  ```bash
+    cd frontend
+    npm install
+    npm run dev
+  ```
+  Vite will start the app (usually at http://localhost:5173).
+
+  
+Note: The frontend currently calls the backend at
+http://localhost:8000/coach/message (hard-coded in TrainerAvatar.tsx).
+Make sure your FastAPI backend is running on that URL, or adjust it if needed.
+
+---
+
+## 🧪 Supported Exercises
+  Currently implemented:
+  - **Bodyweight Squats
+  - **Jumping Jakcs**
+  Each Exercise has:
+  - **Custom pose logic**
+  - **Rep detection**
+  - **Form error detection**
+  - **LLM-based correction messages**
+
+---
+
+## 🏆 Author
+Soham Bansal
+AI/ML & Full-Stack Developer
+
+
