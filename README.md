@@ -83,15 +83,15 @@ Tracks:
 
 - **Main Screen UI**
   
-  <img src="genai-trainer/src/assets/main_screen.png" alt="drawing" width="500"/>
+  <img src="Frontend/src/assets/main_screen.png" alt="drawing" width="500"/>
 
 - **Wrong Pose PopUp**
 
-  <img src="genai-trainer/src/assets/wrongpose_popup.png" alt="drawing" width="500"/>
+  <img src="Frontend/src/assets/wrongpose_popup.png" alt="drawing" width="500"/>
 
 - **Dashboard UI**
   
-  <img src="genai-trainer/src/assets/dashboard.png" alt="drawing" width="500"/>
+  <img src="Frontend/src/assets/dashboard.png" alt="drawing" width="500"/>
 
 
 ---
